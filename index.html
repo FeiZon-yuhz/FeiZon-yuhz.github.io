@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <script src="rainbowimg.js"></script>
     <title>繁星點點</title>
     <!--滿版背景
            <style>
@@ -31,17 +31,23 @@
     </style>
         -->
 
+    
 
 </head>
 <body style="background-color:#000000">
-    <nav class="navbar navbar-inverse  justify-content-center">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand">
-                    <span>繁星點點</span>
-                </a>
-            </div>
-            <div id="navbar-menu" class="navbar-collapse collapse">
+            <!-- 導覽列開始 -->
+            <a class="navbar-brand" href="#">繁星點點</a>  <!-- Logo 放置處 -->
+            <!-- 就是當畫面縮小時，摺疊起來的按鈕圖示 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mylink">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 會被摺疊起來的各個超連結 -->
+
+
+            <div class="navbar-collapse collapse" id="mylink">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a href="#home" data-toggle="tab">首頁</a></li>
                     <li class="nav-item"><a href="#rainbow" data-toggle="tab">彩虹卡</a></li>
@@ -50,7 +56,10 @@
                 </ul>
             </div>
         </div>
-    </nav>
+
+    </nav>  <!-- 導覽列結束 -->
+
+
 
 
 
@@ -59,26 +68,32 @@
             <div class="tab-content" style="padding:10px;">
 
                 <div class="tab-pane active" id="home">
+
                     <span style="color:#ffffff;">
-                        <p>這是首頁</p>
+                        <p class="text-xl-center">這是首頁</p>
                     </span>
 
                 </div>
 
-                <div class="tab-pane" id="rainbow">
+                <div class="tab-pane fade" id="rainbow">
                     <span style="color:#ffffff;">
                         <p>這是彩虹卡</p>
                     </span>
+                    <div class="container">
+                        <input type="button" value="抽卡" class="btn btn-primary" onclick="change()" style="width:500px">
+                        <br>
+                        <img id="rainbowimg" src="img/rainbow/n0.jpg" width="500">
+                    </div>
                 </div>
 
-                <div class="tab-pane" id="FUN">
+                <div class="tab-pane fade" id="FUN">
                     <span style="color:#ffffff;">
                         <p>這是FUN心福卡</p>
                     </span>
 
                 </div>
 
-                <div class="tab-pane" id="people">
+                <div class="tab-pane fade" id="people">
                     <span style="color:#ffffff;">
                         <p>占卜師們</p>
                     </span>
@@ -94,11 +109,8 @@
 
 
 
-    <!-- A footer for the page.
-      <footer style="background-color:#DEFFFF">
-        -->
-    <!-- A footer for the page. -->
-    <footer>
+
+    <footer class="fixed-bottom">
         <div class="container-fluid" style="background-color: #0a0a0a">
             <div class="container" style="background-color: #0a0a0a">
                 <h3 align="center" style="color:#ffffff;">繁星們</h3>
@@ -165,63 +177,10 @@
                             未定
                         </span>
                     </div>
-                    </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!--  <table class="" align="center">
-              <tbody>
-                  <tr>
-                      <td align="center" width="500">
-                          <img src="img/icon/instagram.png" width="20" height="20">
-                          <span style="color:#ffffff;">
-                              yuhz_tarot
-                          </span>
-                      </td>
-                      <td align="center"  width="500">
-                          <img src="img/icon/facebook.png" width="20" height="20">
-                          <span style="color:#ffffff;">
-                              FeiZon希望之光療癒塔羅
-                          </span>
-                      </td>
-                      <td align="center">@mdo</td>
-                  </tr>
-                  <tr>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                  </tr>
-                  <tr>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                  </tr>
-              </tbody>
-          </table>
-        -->
             </div>
-
-
-
-
-
-
-
-
-
-
-
-</footer>
+        </div>
+    </footer>
 </body>
 
 </html>
