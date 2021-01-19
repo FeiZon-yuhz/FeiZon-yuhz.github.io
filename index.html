@@ -34,7 +34,20 @@
     
 
 </head>
-<body style="background-color:#000000">
+<body>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(img/stars.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container">
             <!-- 導覽列開始 -->
@@ -67,22 +80,36 @@
         <div class="container">
             <div class="tab-content" style="padding:10px;">
 
-                <div class="tab-pane active" id="home">
+                <div class="tab-pane active " id="home">
+                    <div class="col-sm-2" align="center">  </div>
 
-                    <span style="color:#ffffff;">
-                        <p class="text-xl-center">這是首頁</p>
-                    </span>
+                    <div class="col-sm-8" align="center">
+                        <p style="background: #000000">
+                            <span style="color:#ffffff;" class="text-xl-center">
+                                這是首頁
+                            </span>
+                        </p>
+                    </div>
+
+
+
 
                 </div>
 
                 <div class="tab-pane fade" id="rainbow">
-                    <span style="color:#ffffff;">
-                        <p>這是彩虹卡</p>
-                    </span>
-                    <div class="container">
-                        <input type="button" value="抽卡" class="btn btn-primary" onclick="change()" style="width:500px">
-                        <br>
-                        <img id="rainbowimg" src="img/rainbow/n.jpg" width="500">
+                    <div class="col-sm-2" align="center">  </div>
+
+                    <div class="col-sm-8" align="center">
+                        <p style="background: #000000">
+                            <span style="color:#ffffff;" class="text-xl-center">
+                                這是彩虹卡
+                            </span>
+                        </p>
+                        <div>
+                            <input type="button" value="抽卡" class="btn btn-primary" onclick="change()" style="width:500px">
+                            <br>
+                            <img id="rainbowimg" src="img/rainbow/n.jpg" width="500">
+                        </div>
                     </div>
                 </div>
 
@@ -174,11 +201,11 @@
 
 
     <footer class="fixed-bottom">
-        <div class="container-fluid" style="background-color: #0a0a0a" >
+        <div class="container-fluid" style="background-color: #0a0a0a">
             <div class="container" style="background-color: #0a0a0a">
                 <h3 align="center" style="color:#ffffff;">也請大家看看我們辛苦的夥伴們喔</h3>
-                如有任何問題請私訊(__________)
-               
+                
+                <h5 align="center" style="color:#ffffff;">如有任何問題請來訊(a6512272@gmail.com)</h5>
             </div>
         </div>
     </footer>
